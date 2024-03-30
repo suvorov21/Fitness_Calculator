@@ -1,4 +1,4 @@
-def food():
+def food() -> int:
     """
     Function that takes eaten food as input and returns quantity of calories as output
     """
@@ -16,5 +16,5 @@ def food():
         eaten_calories = "nuzhno dorabotat"
     return eaten_calories
 
-# print(food())
+print(food())
 
