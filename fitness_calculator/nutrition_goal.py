@@ -40,4 +40,4 @@ def nutrition_goal(sex, age, weight, height, weight_goal, days_to_goal, level_of
     return NDC
 
 
-nutrition_goal("men", 28,85, 180, 80, 60, 2)
+# nutrition_goal("men", 28,85, 180, 80, 60, 2)

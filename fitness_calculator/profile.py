@@ -15,15 +15,13 @@ class User:
 
     def set_goal(self,  weight_goal):
         self.weight_goal = weight_goal
-
+        return weight_goal
     def days_to_goal(self, days):
         self.days = days
-
+        return days
     def level(self, level_of_activity):
         self.level_of_activity = level_of_activity
+        return level_of_activity
 
-alex = User('Alex', 'Bes', 'men', 28, 85, 180)
-print(alex)
-print(alex.weight)
-alex.weight_goal = 60
-print(alex.weight_goal)
+
+# alex = User('Alex', 'Bes', 'men', 28, 85, 180)
