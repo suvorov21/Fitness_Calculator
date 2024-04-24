@@ -1,6 +1,6 @@
 from profile import User
-from nutrition_goal import *
-from test_data import *
+from nutrition_goal import nutrition_goal
+import test_data
 from workout_goal import workout_daily_goal
 from eaten_food import food
 
@@ -22,11 +22,11 @@ def main(user):
     while add_exercise:
         print("Please enter what exercise did you done: \n")    # Ask user to input an exercise.
                                                                 # Put it into daily_workout function as exercise type
-        daily_workout += workout_daily_goal("running", AEROBIC, ANAEROBIC)
+        daily_workout += workout_daily_goal("running", test_data.AEROBIC, test_data.ANAEROBIC)
         add_exercise = False    # Ask user if he wants to add another exercises
 
-    if CALORIES_PER_TRAINING - daily_workout > 0:
-        print(f"Today you have burned {daily_workout}, you have {CALORIES_PER_TRAINING - daily_workout} "
+    if test_data.CALORIES_PER_TRAINING - daily_workout > 0:
+        print(f"Today you have burned {daily_workout}, you have {test_data.CALORIES_PER_TRAINING - daily_workout} "
               f"to accomplish your daily norm ")
     else:
         print(f"You did great job, you have burned {daily_workout} calories")
@@ -36,7 +36,7 @@ def main(user):
     while add_food:
         print("Please enter what food and how much of it did you eat: \n")  # Ask user to input an eaten food.
                                                                             # Put it into food function as eaten food
-        eaten_calories += food("dry rice", 100, TEST_FOOD)
+        eaten_calories += food("dry rice", 100, test_data.TEST_FOOD)
         add_food = False    # Ask user if he wants to add another exercises
 
     if ndc - eaten_calories < 0:
@@ -44,6 +44,6 @@ def main(user):
     else:
         print(f"Today you have eat {eaten_calories}, you can eat {ndc - eaten_calories} more")
 
-    return "A schto-to nuzhno returnit?"
+    return None
 
-main(user_1)
+print(main(user_1))

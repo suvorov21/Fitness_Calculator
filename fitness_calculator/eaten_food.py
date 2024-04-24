@@ -1,4 +1,4 @@
-from test_data import *
+from test_data import TEST_FOOD
 
 
 def food(eaten_food: str, food_mass: int, ingredients_dict: dict) -> int:
